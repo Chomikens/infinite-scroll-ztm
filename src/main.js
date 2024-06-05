@@ -133,8 +133,9 @@ const renderImages = createImageLoader();
 renderImages(5);
 
 // Event listener for infinite scrolling
-window.onscroll = function() {
+
+window.addEventListener('scroll', () => {
   if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
+    console.log('scrolled')
     renderImages(5);
-  }
-};
+}})
